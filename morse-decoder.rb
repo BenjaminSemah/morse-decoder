@@ -43,9 +43,18 @@ end
 
 def decode_word(word)
   decoded_word = ""
-  characters = word.split("")
+  characters = word.split
   charactiers.each do |character|
     decoded_word += decode_char(character)
   end
   decoded_word
+end
+
+def decode(message)
+  decoded_msg = ""
+  message.split('   ')
+  words.each do |word|
+    decoded_msg += "#{decode_word(word)} "
+  end
+  decoded_msg.strip
 end
