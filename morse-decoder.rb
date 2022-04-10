@@ -41,4 +41,11 @@ def decode_char(character)
   MORSE_KEYS[character]
 end
 
-
+def decode_word(word)
+  decoded_word = ""
+  characters = word.split("")
+  charactiers.each do |character|
+    decoded_word += decode_char(character)
+  end
+  decoded_word
+end
