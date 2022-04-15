@@ -1,3 +1,5 @@
+require 'pry'
+
 MORSE_KEYS = {
   '.-' => 'A',
   '-...' => 'B',
@@ -47,14 +49,7 @@ def decode_word(word)
   characters.each do |character|
     decoded_word += decode_char(character)
   end
-  decoded_word
+  deocded_word
 end
 
-def decode(message)
-  decoded_msg = ''
-  message.split('   ')
-  words.each do |word|
-    decoded_msg += "#{decode_word(word)} "
-  end
-  deocded_msg.strip
-end
+binding.pry
